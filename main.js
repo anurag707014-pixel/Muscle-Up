@@ -71,14 +71,3 @@ dietTabs.forEach((tab) => {
   });
 });
 
-const contactForm = document.querySelector("#contact-form");
-if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const status = document.querySelector("#contact-status");
-    if (status) {
-      status.textContent = "Thanks for reaching out! This demo form is ready to connect to your email service.";
-      contactForm.reset();
-    }
-  });
-}
