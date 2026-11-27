@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d0d">
+  <meta name="description" content="Estimate your body mass index with the Muscle Up BMI calculator.">
+  <title>BMI Calculator | Muscle Up Fitness</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/bmi.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Muscle Up home"><span class="brand-mark" aria-hidden="true">✚</span><span>Muscle<small>UP</small></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="primary-navigation" aria-label="Main navigation"><a href="index.html">Home</a><a class="active" aria-current="page" href="bmi.html">BMI Calculator</a><a href="workouts.html">Workouts</a><a href="diet.html">Diet Plans</a><a href="contact.html">Contact</a></nav>
+  </header>
+  <main class="page-main">
+    <section class="page-intro"><p class="eyebrow">A QUICK HEALTH CHECK-IN</p><h1>BMI <span>calculator</span></h1><p>Enter your height and weight for a general estimate of your Body Mass Index.</p></section>
+    <section class="bmi-layout">
+      <form class="panel bmi-form" id="bmi-form">
+        <h2>Calculate your BMI</h2>
+        <div class="unit-selectors">
+          <div class="unit-selector-box"><label for="height-unit">Height</label><select id="height-unit" name="height-unit"><option value="cm">Centimeters (cm)</option><option value="ft-in">Feet &amp; inches</option></select></div>
+          <div class="unit-selector-box"><label for="weight-unit">Weight</label><select id="weight-unit" name="weight-unit"><option value="kg">Kilograms (kg)</option><option value="lb">Pounds (lb)</option></select></div>
+        </div>
+        <div class="bmi-entry-fields">
+          <div id="height-cm-field" class="bmi-input-group"><label for="height">Height <span>(cm)</span></label><input id="height" name="height" type="number" min="50" max="275" step="0.1" placeholder="e.g. 170" required></div>
+          <div id="height-imperial-field" class="bmi-input-group" hidden>
+            <div class="bmi-group-title">Height</div><div class="imperial-height-inputs">
+              <div><label for="height-feet">Feet</label><input id="height-feet" name="height-feet" type="number" min="0" max="9" step="1" placeholder="e.g. 5"></div>
+              <div><label for="height-inches">Inches</label><input id="height-inches" name="height-inches" type="number" min="0" max="11.9" step="0.1" placeholder="e.g. 7"></div>
+            </div>
+          </div>
+          <div id="weight-kg-field" class="bmi-input-group"><label for="weight">Weight <span>(kg)</span></label><input id="weight" name="weight" type="number" min="10" max="500" step="0.1" placeholder="e.g. 65" required></div>
+          <div id="weight-lb-field" class="bmi-input-group" hidden><label for="weight-pounds">Weight <span>(lb)</span></label><input id="weight-pounds" name="weight-pounds" type="number" min="22.1" max="1102.3" step="0.1" placeholder="e.g. 143"></div>
+        </div>
+        <button class="button button-wide" type="submit">Calculate BMI <span aria-hidden="true">→</span></button>
+        <div class="result-box" id="bmi-result" aria-live="polite">
+          <p class="result-label">Your BMI</p><p class="result-value" id="bmi-value">—</p><p class="result-category" id="bmi-category">Enter your details above</p>
+          <p class="result-message" id="bmi-message">BMI is one general screening measure and does not diagnose health.</p>
+        </div>
+      </form>
+      <div class="bmi-side">
+        <section class="panel"><h2><span class="accent-icon" aria-hidden="true">▥</span> BMI categories</h2><div class="table-wrap"><table><thead><tr><th scope="col">BMI range</th><th scope="col">Category</th></tr></thead><tbody><tr><td>Below 18.5</td><td>Underweight</td></tr><tr><td>18.5–24.9</td><td>Normal range</td></tr><tr><td>25.0–29.9</td><td>Overweight</td></tr><tr><td>30.0 and above</td><td>Obesity</td></tr></tbody></table></div></section>
+        <section class="panel formula-panel"><span class="formula-icon" aria-hidden="true">♙</span><div><h2>BMI formula</h2><p class="formula" id="bmi-formula">Weight (kg) ÷ height (m)<sup>2</sup></p></div></section>
+        <p class="disclaimer">BMI is a screening tool and may not reflect individual health, body composition, or differences across age groups. For personal guidance, talk with a qualified health professional.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✚</span><span>Muscle<small>UP</small></span></a><p>Move well. Feel strong. Live fully.</p><a class="social-link" href="https://www.instagram.com/muscleup.hackathon?bqrl=MTl4OXN3Ymw5NG03bQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><small>© <span data-year></span> Muscle Up Fitness</small></footer>
+</body>
+</html>
